@@ -1,38 +1,164 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.App{
+  width: 100vw;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2)),url("./images/bc.jpeg") no-repeat center fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 0;
+  padding-bottom: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 2rem;  
+    font-weight: 700;
+}
+nav a:hover{
+  animation: color 2s linear infinite;
+}
+@keyframes color {
+  0%{
+    text-shadow:  5px 5px 5px violet;
+  }
+  25%{
+    text-shadow:  -5px 5px 5px red;
+  }
+  50%{
+    text-shadow:  -5px -5px 5px green;
+  }
+  75%{
+    text-shadow: 5px -5px 5px blue;
+  }
+  100%{
+    text-shadow: 5px 5px 5px violet;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.button{
+  padding: 2rem 0;
+}
+.box{
+  min-width: 100%;
+  max-width: 90vw;
+  height: 100px;
+  background:linear-gradient(135deg, rgb(0, 0, 0), rgb(0, 0, 0), rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.1)),url("./images/binary.jpeg") no-repeat center fixed;
+  background-size: cover;
+  background-position: right;
+  box-shadow: 5px 5px 30px rgb(0, 0, 0), inset 5px 5px 0px rgb(179, 179, 179);
+  border-radius: 20px;
+  padding: 2rem;
+  overflow: hidden;
+  cursor: pointer;
+  transform: scale(.95);
+  transition: .2s all ease;
+}
+.box:hover{
+  transform: scale(1);
+  box-shadow: 8px 8px 25px rgb(53, 53, 53);
+}
+.box:active{
+  transform: scale(.95);
+  box-shadow: 8px 8px 25px rgb(53, 53, 53);
+}
+.box h2{
+  font-size: 2rem;
+  padding: 1rem;
+  color: white !important;
+  text-transform: capitalize;
+  color: rgb(65, 65, 65);
+  text-shadow: 1px 1px 3px rgb(60, 59, 59);
+  transform: scale(.95);
+  transition: .4s all ease-in;
+}
+.box:hover h2{
+  transform: scale(1.1);
+  text-shadow: 8px 5px 3px rgb(97, 97, 97);
+}
+.footer{
+  width: 100vw;
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image:  radial-gradient(#444cf7 1.1500000000000001px, transparent 1.1500000000000001px), radial-gradient(#444cf7 1.1500000000000001px, #e5e5f7 1.1500000000000001px);
+  background-size: 46px 46px;
+  background-position: 0 0,23px 23px;
+  
+}
+
+section{
+  width: 100vw;
+  min-height: 80vh;
+}
+
+label{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+input{
+  padding: .2rem 1rem;
+  max-width: 90vw;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid black;
+  font-size: 1.5rem;
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.465);
+  box-shadow: 5px 5px 10px black;
+  text-shadow: 1px 1px 2px grey;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  outline: none;
+  padding: .5rem 1rem;
+  margin: 1rem 0 ;
+  cursor: pointer;
+  transition: .3s all;
+}
+button:hover{
+  animation: shadow 2s linear infinite;
+}
+@keyframes shadow {
+  0%{
+    box-shadow:  5px 5px 20px black;
   }
-  to {
-    transform: rotate(360deg);
+  25%{
+    box-shadow:  -5px 5px 20px red;
   }
+  50%{
+    box-shadow:  -5px -5px 20px green;
+  }
+  75%{
+    box-shadow: 5px -5px 20px blue;
+  }
+  100%{
+    box-shadow: 5px 5px 20px black;
+  }
+}
+button:active{
+  transform: scale(.95);
+}
+
+p{
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+p span{
+  color:red
 }
